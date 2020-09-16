@@ -1,4 +1,4 @@
-package day54_Abstaction;
+package day54_Abstaction.EmployeeTask;
 
 /*Task:
     1.create a class named Employee (meant to be super class):
