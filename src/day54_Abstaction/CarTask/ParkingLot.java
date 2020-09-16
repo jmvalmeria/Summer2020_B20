@@ -4,15 +4,15 @@ public class ParkingLot {
 
     public static void main(String[] args) {
 
-        BMW car1 = new BMW();
-        Tesla car2 = new Tesla();
-        Toyota car3 = new Toyota();
-        Jeep car4 = new Jeep();
+        BMW bmw = new BMW();
+        Tesla tesla = new Tesla();
+        Toyota toyota = new Toyota();
+        Jeep jeep = new Jeep();
 
-        car1.start();
-        car2.start();
-        car3.start();
-        car4.start();
+        bmw.start();
+        tesla.start();
+        toyota.start();
+        jeep.start();
 
     }
 }
