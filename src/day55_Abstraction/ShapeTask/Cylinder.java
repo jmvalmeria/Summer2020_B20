@@ -7,7 +7,9 @@ package day55_Abstraction.ShapeTask;
             add a static block that can initialize the static variables of the cylinder*/
 
 
-public class Cylinder extends Shape {
+import java.text.DecimalFormat;
+
+public final class Cylinder extends Shape {
     public double radius;
     public double height;
 
@@ -26,7 +28,7 @@ public class Cylinder extends Shape {
 
     @Override
     public double calculateArea() {
-        return radius*height*Math.PI;
+        return (2*Math.PI*Math.pow(radius,2))+(2*Math.PI*radius*height);
     }
 
     @Override
@@ -37,5 +39,17 @@ public class Cylinder extends Shape {
     @Override
     public double calculateVolume() {
         return Math.pow(radius,2)*height*Math.PI;
+    }
+
+    @Override
+    public String toString() {
+        DecimalFormat df = new DecimalFormat("0.00");
+        return "Cylinder{" +
+                "radius=" + radius +
+                ", height=" + height +
+                ", area=" + df.format(area) +
+                ", perimeter=" + df.format(perimeter) +
+                ", volume=" + df.format(volume) +
+                '}';
     }
 }

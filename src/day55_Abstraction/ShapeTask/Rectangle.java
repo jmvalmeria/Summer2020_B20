@@ -8,7 +8,9 @@ package day55_Abstraction.ShapeTask;
             add a static block that can initialize the static variables of the rectangle
 */
 
-public class Rectangle extends Shape {
+import java.text.DecimalFormat;
+
+public final class Rectangle extends Shape {
     public double width;
     public double length;
 
@@ -40,4 +42,15 @@ public class Rectangle extends Shape {
         return 0;
     }
 
+    @Override
+    public String toString() {
+        DecimalFormat df = new DecimalFormat("0.00");
+        return "Rectangle{" +
+                "width=" + width +
+                ", length=" + length +
+                ", area=" + df.format(area) +
+                ", perimeter=" + df.format(perimeter) +
+                ", volume=" + df.format(volume) +
+                '}';
+    }
 }

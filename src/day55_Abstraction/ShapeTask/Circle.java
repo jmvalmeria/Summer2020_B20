@@ -8,7 +8,9 @@ package day55_Abstraction.ShapeTask;
             add a static block that can initialize the static variables of the circle
 */
 
-public class Circle extends Shape {
+import java.text.DecimalFormat;
+
+public final class Circle extends Shape {
     public double radius;
 
     static { //This for initialize Static Variables
@@ -40,11 +42,12 @@ public class Circle extends Shape {
 
     @Override
     public String toString() {
+        DecimalFormat df = new DecimalFormat("0.00");
         return "Circle{" +
                 "radius=" + radius +
-                ", area=" + area +
-                ", perimeter=" + perimeter +
-                ", volume=" + volume +
+                ", area=" + df.format(area) +
+                ", perimeter=" + df.format(perimeter) +
+                ", volume=" + df.format(volume) +
                 '}';
     }
 }
