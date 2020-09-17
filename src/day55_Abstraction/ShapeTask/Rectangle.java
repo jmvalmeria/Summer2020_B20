@@ -14,14 +14,14 @@ public final class Rectangle extends Shape {
     public double width;
     public double length;
 
-    static { //This initialize the Shape Static Variables
-        name = "Rectangle";
-        hasVolume = false;
-    }
-
     public Rectangle(double width, double length){
+        if (width <=0 || length <=0){
+            throw new RuntimeException("Width or Length of the rectangle cannot be negative or 0");
+        }
         this.width = width;
         this.length = length;
+        name = "Rectangle";
+        hasVolume = false;
         area = calculateArea();
         perimeter = calculatePerimeter();
         volume = calculateVolume();

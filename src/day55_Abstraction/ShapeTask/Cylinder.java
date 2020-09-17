@@ -13,14 +13,14 @@ public final class Cylinder extends Shape {
     public double radius;
     public double height;
 
-    static {
-        name = "Cylinder";
-        hasVolume = true;
-    }
-
     public Cylinder(double radius,double height){
+        if (radius <=0 || height <=0){
+            throw new RuntimeException("Radius or Height of the cylinder cannot be negative or 0");
+        }
         this.radius = radius;
         this.height = height;
+        name = "Cylinder";
+        hasVolume = true;
         area = calculateArea();
         perimeter = calculatePerimeter();
         volume = calculateVolume();
@@ -47,8 +47,10 @@ public final class Cylinder extends Shape {
         return "Cylinder{" +
                 "radius=" + radius +
                 ", height=" + height +
+                ", name='" + name + '\'' +
                 ", area=" + df.format(area) +
                 ", perimeter=" + df.format(perimeter) +
+                ", hasVolume=" + hasVolume +
                 ", volume=" + df.format(volume) +
                 '}';
     }

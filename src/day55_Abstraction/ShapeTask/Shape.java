@@ -9,10 +9,10 @@ package day55_Abstraction.ShapeTask;
 
 public abstract class Shape { //When a class is abstract it cannot create object, cannot be final
 
-    public static String name;
+    public String name;
     public double area;
     public double perimeter;
-    public static boolean hasVolume;
+    public boolean hasVolume;
     public double volume;
 
     public abstract double calculateArea();

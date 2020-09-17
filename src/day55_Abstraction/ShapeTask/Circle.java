@@ -13,12 +13,13 @@ import java.text.DecimalFormat;
 public final class Circle extends Shape {
     public double radius;
 
-    static { //This for initialize Static Variables
-        name = "circle";
-        hasVolume = false;
-    }
 
     public Circle (double radius){ //This is to initialize instances variables
+        if (radius <=0){
+            throw new RuntimeException("Radius of the circle cannot be negative or 0");
+        }
+        name = "circle";
+        hasVolume = false;
         this.radius = radius;
         area = calculateArea();
         perimeter = calculatePerimeter();
@@ -45,8 +46,10 @@ public final class Circle extends Shape {
         DecimalFormat df = new DecimalFormat("0.00");
         return "Circle{" +
                 "radius=" + radius +
-                ", area=" + df.format(area) +
+                ", name='" + name + '\'' +
+                ", area=" + area +
                 ", perimeter=" + df.format(perimeter) +
+                ", hasVolume=" + hasVolume +
                 ", volume=" + df.format(volume) +
                 '}';
     }
