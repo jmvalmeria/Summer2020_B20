@@ -1,4 +1,4 @@
-package day56_Abstraction.Phone;
+package day56_Abstraction_Interface.Phone;
 
 public final class Samsung extends Phone {
     public Samsung(String model, double price, String size){
