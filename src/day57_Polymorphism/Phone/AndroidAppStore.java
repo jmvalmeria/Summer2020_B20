@@ -1,11 +1,10 @@
-package day57_.Phone;
+package day57_Polymorphism.Phone;
 
-public interface AndroidAppStore {
+public interface AndroidAppStore extends Downloadable {
     /*1. create an interface named AndroidAppStore
             variable: AppStoreName
             abstract method: downloadAndroidApp();*/
 
-    String AppStoreName = "Google Play Apps";
-    void downloadAndroidApp();
+    String AppStoreName = "Google Play";
 
 }

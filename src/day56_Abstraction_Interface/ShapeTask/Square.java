@@ -18,7 +18,7 @@ public final class Square extends ShapeAbs {
 
     @Override
     public double calculateArea() {
-        return side*2;
+        return Math.pow(side,2);
     }
 
     @Override

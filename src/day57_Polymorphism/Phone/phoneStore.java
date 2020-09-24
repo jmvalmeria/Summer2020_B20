@@ -1,11 +1,11 @@
-package day57_.Phone;
+package day57_Polymorphism.Phone;
 
 public class phoneStore {
 
     public static void main(String[] args) {
 
-        Samsung samsung1 = new Samsung("Samsung","J7 Prime", 189.99,"5.5");
-        iPhone iPhone1 = new iPhone("iPhone","iPhone 8",249.99,"4.7");
+        Samsung samsung1 = new Samsung ("J7 Prime", 189.99,"5.5");
+        iPhone iPhone1 = new iPhone("iPhone 8",249.99,"4.7");
 
         System.out.println("Phones List in Stock:");
         System.out.println("==========================================");
@@ -18,8 +18,8 @@ public class phoneStore {
 
         System.out.println("Testing Iphone functions:");
         System.out.println("==========================================");
-        iPhone1.calling();
-        iPhone1.texting();
+        iPhone1.calling(412123456);
+        iPhone1.texting(412123456);
         iPhone1.faceTiming();
 
         System.out.println();
@@ -27,8 +27,8 @@ public class phoneStore {
 
         System.out.println("Testing Samsung functions:");
         System.out.println("==========================================");
-        samsung1.calling();
-        samsung1.texting();
+        samsung1.calling(412123456);
+        samsung1.texting(412123456);
         samsung1.freezing();
 
 

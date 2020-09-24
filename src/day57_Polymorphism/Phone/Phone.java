@@ -1,4 +1,4 @@
-package day57_.Phone;
+package day57_Polymorphism.Phone;
 
 /*Warmup task:
     1. create an interface named AndroidAppStore
@@ -32,13 +32,13 @@ public abstract class Phone {
         this.brand = brand;
         this.model = model;
         this.price = price;
-        this.price = price;
         if(price <= 0){
-            throw new RuntimeException("Invalid Price, cannot be negative");
+            throw new RuntimeException("Invalid Price, cannot be negative or zero");
         }
+        this.price = price;
     }
 
-    public abstract void texting();
-    public abstract void calling();
+    public abstract void texting(long phoneNumber);
+    public abstract void calling(long phoneNumber);
 
 }

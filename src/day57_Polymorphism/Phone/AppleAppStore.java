@@ -1,9 +1,8 @@
-package day57_.Phone;
+package day57_Polymorphism.Phone;
 
-public interface AppleAppStore {
+public interface AppleAppStore extends Downloadable {
     /*2. create an interface named AppleAppStore
             variable: AppStoreName
             abstract method: downloadAppleApp();*/
-    String AppStoreName = "Apple Store";
-    void downloadAppleApp();
+    String AppStoreName = "App Store";
 }
