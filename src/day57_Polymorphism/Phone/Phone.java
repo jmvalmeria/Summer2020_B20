@@ -31,11 +31,11 @@ public abstract class Phone {
     public Phone(String brand, String model, double price, String size){
         this.brand = brand;
         this.model = model;
-        this.price = price;
         if(price <= 0){
             throw new RuntimeException("Invalid Price, cannot be negative or zero");
         }
         this.price = price;
+        this.size = size;
     }
 
     public abstract void texting(long phoneNumber);

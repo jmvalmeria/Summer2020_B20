@@ -5,7 +5,7 @@ package day57_Polymorphism.Phone;
              if the price of Samsung is more than 1200, the system should throw an exception with a message of:
                     Invalid Price, Samsung' price cannot more than 1200*/
 
-public final class Samsung extends Phone implements AndroidAppStore, Downloadable {
+public final class Samsung extends Phone implements AndroidApp {
 
     public Samsung (String model, double price, String size){
         super("Samsung", model, price, size);

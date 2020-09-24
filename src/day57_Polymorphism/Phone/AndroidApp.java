@@ -1,6 +1,6 @@
 package day57_Polymorphism.Phone;
 
-public interface AndroidAppStore extends Downloadable {
+public interface AndroidApp extends Downloadable {
     /*1. create an interface named AndroidAppStore
             variable: AppStoreName
             abstract method: downloadAndroidApp();*/

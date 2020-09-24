@@ -1,6 +1,6 @@
 package day57_Polymorphism.Phone;
 
-public final class iPhone extends Phone implements AppleAppStore, Downloadable {
+public final class iPhone extends Phone implements AppleApp {
 
     /*4. create a class named iPhone that can inherit from AppleApps and Phone
             actions: texting(), calling(), faceTiming()

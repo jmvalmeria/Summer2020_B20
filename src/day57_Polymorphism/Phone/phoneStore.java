@@ -6,6 +6,7 @@ public class phoneStore {
 
         Samsung samsung1 = new Samsung ("J7 Prime", 189.99,"5.5");
         iPhone iPhone1 = new iPhone("iPhone 8",249.99,"4.7");
+        Huawei huawei1 = new Huawei("Huawei P30",664.77, "6.3");
 
         System.out.println("Phones List in Stock:");
         System.out.println("==========================================");
