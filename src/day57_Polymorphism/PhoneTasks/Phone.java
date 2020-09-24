@@ -1,4 +1,4 @@
-package day57_Polymorphism.Phone;
+package day57_Polymorphism.PhoneTasks;
 
 /*Warmup task:
     1. create an interface named AndroidAppStore

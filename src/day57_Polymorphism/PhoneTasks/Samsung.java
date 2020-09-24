@@ -1,4 +1,4 @@
-package day57_Polymorphism.Phone;
+package day57_Polymorphism.PhoneTasks;
 
 /*5. create a class named Samsung that can inherit from AndroidApps and Phone
             actions: texting(), calling(), freezing()
