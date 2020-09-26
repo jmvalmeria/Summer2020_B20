@@ -1,5 +1,9 @@
 package day58_Polymorphism;
 
+import day55_Abstraction.ShapeTask.Circle;
+import day55_Abstraction.ShapeTask.Cylinder;
+import day55_Abstraction.ShapeTask.Rectangle;
+import day55_Abstraction.ShapeTask.Shape;
 import day58_Polymorphism.AnimalTask.Animal;
 import day58_Polymorphism.AnimalTask.Dog;
 import day58_Polymorphism.AnimalTask.Cat;
@@ -27,6 +31,24 @@ public class InstanceOf_Keyword {
 
         System.out.println(animal1 instanceof Dog); //When there is NOT Polymorphism do NOT use this relation ship
 
+        System.out.println("============================================================");
+
+        Shape shape1 = new Rectangle(3,5);
+
+        identifyShape(shape1);
+
+
+    }
+
+
+    public static void identifyShape(Shape shape){
+        if(shape instanceof Circle){
+            System.out.println("The shape is a circle");
+        } else if(shape instanceof Cylinder){
+            System.out.println("The shape is a cylinder");
+        } else {
+            System.out.println("The shape is a rectangle");
+        }
     }
 
 
