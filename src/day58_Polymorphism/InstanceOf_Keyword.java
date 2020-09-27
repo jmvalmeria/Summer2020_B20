@@ -1,12 +1,8 @@
 package day58_Polymorphism;
 
-import day55_Abstraction.ShapeTask.Circle;
-import day55_Abstraction.ShapeTask.Cylinder;
-import day55_Abstraction.ShapeTask.Rectangle;
-import day55_Abstraction.ShapeTask.Shape;
-import day58_Polymorphism.AnimalTask.Animal;
-import day58_Polymorphism.AnimalTask.Dog;
-import day58_Polymorphism.AnimalTask.Cat;
+import day55_Abstraction.ShapeTask.*;
+import day57_Polymorphism.PhoneTasks.*;
+import day58_Polymorphism.AnimalTask.*;
 
 public class InstanceOf_Keyword {
 
@@ -38,6 +34,7 @@ public class InstanceOf_Keyword {
         identifyShape(shape1);
 
         System.out.println("============================================================");
+
         Circle c1 = new Circle(3);
         Circle c2 = new Circle(3);
 
@@ -52,6 +49,13 @@ public class InstanceOf_Keyword {
         Cylinder cy2 = new Cylinder(9,5);
         System.out.println("equalShape(cy1,cy2) = " + equalShape(cy1, cy2));
 
+        System.out.println("============================================================");
+
+        Phone phone1 = new iPhone("11",1200, "6");
+        Phone phone2 = new Samsung("S8", 900, "6.5");
+
+        facetiming(phone1);
+        facetiming(phone2);
     }
 
 
@@ -97,5 +101,19 @@ public class InstanceOf_Keyword {
         return result;
     }
 
+    public static void facetiming(Phone phone){
+        /*3. Create a custom method called facetiming that takes an argument of Phone,
+        * if the phone is Iphone, the method prints iphone and calls the faceTiming of Iphone,
+        * if the Phone is not Iphone, print "No Such function*/
+
+        boolean isIPhone = phone instanceof iPhone;
+        if (isIPhone){
+            System.out.println(phone.brand + " " + phone.model + ": is calling the faceTiming of Iphone");
+        }else {
+            System.out.println("No Such function!!!");
+            return;
+        }
+
+    }
 
 }
