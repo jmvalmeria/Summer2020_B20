@@ -47,7 +47,6 @@ public class Iterable_Practice {
 
         System.out.println("=======================================");
         ArrayList<Integer> list5 = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7,8,9,10,1,2,2,3,3,4));
-        Iterator<Integer> it1 = list5.iterator();
 
         for(Iterator<Integer> i = list5.iterator(); i.hasNext(); ){
             if(i.next() < 5){
