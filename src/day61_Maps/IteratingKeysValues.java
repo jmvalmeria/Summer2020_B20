@@ -50,7 +50,7 @@ public class IteratingKeysValues {
         studentsGrades.put("Mikri",95);
 
         for (String each : studentsGrades.keySet()){
-            int value = studentsGrades.get(each);
+            Integer value = studentsGrades.get(each);
             if (value <= 80){
                 System.out.println(each);
             }
